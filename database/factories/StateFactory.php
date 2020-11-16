@@ -22,6 +22,7 @@ class StateFactory extends Factory
      */
     public function definition()
     {
+//        7
         return [
             'name' => $this->faker->state,
             'country_id' => Country::factory()
