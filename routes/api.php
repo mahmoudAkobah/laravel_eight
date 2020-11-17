@@ -17,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::group(['middleware' => 'auth:api', 'namespace' => 'Api'], function (){
+    Route::get('/countries', 'CountryController@index');
+    Route::get('/refresh_token', 'Auth\LoginController@refresh_token');
+});
+
+
+Route::post('/login', 'Api\Auth\LoginController@login');
