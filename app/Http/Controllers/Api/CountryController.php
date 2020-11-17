@@ -1,6 +1,8 @@
 <?php
 
 // test pull and push
+
+// new update from githab
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Api\Controller;
